@@ -1,0 +1,332 @@
+$colorHeader : #333333;
+$text:#FCFCFC;
+$white: #ffffff;
+$bomb: #C4C4C4; 
+
+@mixin text-poppins {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+}
+
+a, a:hover {
+  color: inherit;
+}
+.line {
+  width: 46px;
+  border-bottom: 3px solid $white;
+  height: 0;
+}
+.header {
+  background-color: $colorHeader;
+  color: $text;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  .navbar {
+    .navbar-brand {
+      margin-right: 6rem;
+    }
+  }
+  
+  .navbar-nav {
+    
+    .nav-item {
+      font-family: Gilroy;
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: 0.01em;
+
+      .dropdown-toggle::after {
+        border-bottom: 1px solid $text;
+        transform: rotate(45deg);
+        width: 5px;
+        height: 5px;
+        border-right: 1px solid $text;
+        border-top: none;
+        border-left: none;
+
+      }
+    }
+
+    .dropdown-menu{
+      background-color: $colorHeader;
+      
+      .dropdown-item {
+        color: $text;
+      }
+    }
+  }
+
+  .navbar-toggler-icon {
+    background-color: $text;
+  }
+ 
+}
+
+.main {
+  background-image: url("../assets/main-bg.png") ;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  padding-bottom: 30px;
+  position: relative;
+
+  &-vector {
+    background-image: url("../assets/vector.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
+
+  &-text {
+    position: relative;
+    z-index: 1;
+
+    &-left {
+      padding-top: 120px;
+      padding-bottom: 20px;
+      text-align: left;
+      color: $white;
+    }
+    &-links {
+      color: $white;
+      padding-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      a {
+        margin: 10px 25px;
+      }
+    }
+    &-reverse {
+      flex-direction: row-reverse;
+    }
+    &-arrow {
+      display: flex;
+      align-items: flex-end;
+      @media (max-width: 991px) {
+        align-items: flex-start;
+      }
+    }
+    &-right {
+      color: $white;
+      padding-bottom: 70px;
+
+      button {
+        background-color: inherit;
+        color: $white;
+        border-width: 2px;
+      }
+    }
+
+    h2 {
+      @include text-poppins();
+        font-size: 30px;
+        margin-bottom: 17px;
+        @media (max-width: 420px) {
+          font-size: 20px;
+        }
+    }
+    h1 {
+      margin-top: 10px;
+      margin-bottom: 18px;
+      @include text-poppins();
+      font-size: 38px;
+      line-height: 57px;
+      @media (max-width: 420px) {
+        font-size: 28px;
+        line-height: 37px;
+      }
+    }
+    button {
+      width: 260px;
+      @include text-poppins();
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+    }
+    p {
+      margin-top: 10px;
+      margin-bottom: 22px;
+      @include text-poppins();
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  
+}
+.list {
+  background-image: url("../assets/vector-2.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: $white;
+
+  &-cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 80px 0;
+
+    .card {
+      margin: 0 10px;
+      border: none;
+  
+      &-img-top {
+        width: 380px;
+        height: 270px;
+        object-fit: cover;
+      }
+  
+      &-text {
+        @include text-poppins();
+        font-weight: bold;
+        font-size: 19px;
+        color: $colorHeader;
+        margin-bottom: 0;
+      }
+      .line {
+        border-color: $colorHeader;
+        display: inline-block;
+      }
+    }
+  }
+
+  &-info {
+    background: $colorHeader;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    max-width: 1220px;
+    margin-bottom: 80px;
+    @media (max-width: 920px) {
+      flex-direction: column;
+      background: $white;
+      align-items: stretch;
+    }
+
+    &-item {
+      padding: 10px 70px;
+      border-right: 1px solid $white;
+      text-align: center;
+      @media (max-width: 920px) {
+        background: $colorHeader;
+        border: none;
+      }
+
+      p{
+        @include text-poppins();
+        font-size: 19px;
+
+        color: $white;
+        margin-bottom: 0;
+      }
+      span {
+        display: block;
+        @include text-poppins();
+        font-weight: bold;
+        font-size: 19px;
+
+        color: $white;
+      }
+    }
+    &-item:last-child{
+      border: none;
+    }
+  }
+ 
+}
+
+.carousel {
+  width: 100%;
+}
+
+.slide-box {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -50px;
+  @media (max-width: 420px) {
+    margin-left: 0;
+  }
+
+
+  .item { 
+    float: left;
+
+    > div { 
+      text-align: center; 
+      padding:10px; 
+      margin:10px; 
+      background: #F6F5F3;
+      width: 274px;
+      height: 270px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .title {
+      @include text-poppins();
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 24px;
+      color: $colorHeader;
+      margin-bottom: 0;
+    }
+    .subtitle {
+      @include text-poppins();
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+
+      color: $colorHeader;
+    }
+  }
+
+}
+
+.controlls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 46px;
+  margin-bottom: 76px;
+
+  .carousel-control-prev, .carousel-control-next {
+    position: static;
+    opacity: 1;
+  }
+  .carousel-indicators {
+    position: static;
+    margin: 0 50px;
+    align-items: center;
+
+    li {
+      background-color: $bomb;
+      border-radius: 50%;
+      width: 11px;
+      height: 11px;
+    }
+
+    .active {
+      border: 2px solid $colorHeader;
+      background-color: $white;
+    }
+  }
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: .5rem;
+}

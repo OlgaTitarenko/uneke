@@ -1,0 +1,34 @@
+{
+  "name": "uneke",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlgaTitarenko/uneke.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlgaTitarenko/uneke/issues"
+  },
+  "homepage": "https://github.com/OlgaTitarenko/uneke#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0",
+    "inputmask": "^5.0.5",
+    "node-sass": "^4.14.1",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.2"
+  }
+}
